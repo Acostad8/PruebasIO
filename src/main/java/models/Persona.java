@@ -1,15 +1,18 @@
 package models;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serial;
+
 public class Persona {
     private String nombre;
     private String telefono;
-    private String corre;
+    private String correo;
+    @SerializedName("fecha_creacion")
+    private String fechaCreacion;
 
-    public Persona(String nombre, String telefono, String corre) {
-        this.nombre = nombre;
-        this.telefono = telefono;
-        this.corre = corre;
-    }
+
+
 
     public String getNombre() {
         return nombre;
@@ -27,12 +30,27 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    public String getCorre() {
-        return corre;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setCorre(String corre) {
-        this.corre = corre;
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(String fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    public Persona(String nombre, String telefono, String correo, String fechaCreacion) {
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.fechaCreacion = fechaCreacion;
     }
 
     @Override
@@ -40,7 +58,8 @@ public class Persona {
         return "Persona{" +
                 "nombre='" + nombre + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", corre='" + corre + '\'' +
+                ", correo='" + correo + '\'' +
+                ", fechaCreacion='" + fechaCreacion + '\'' +
                 '}';
     }
 }

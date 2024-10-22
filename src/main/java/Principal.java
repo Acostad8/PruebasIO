@@ -1,3 +1,4 @@
+import Servicios.PersonaService;
 import com.google.gson.Gson;
 import models.Persona;
 
@@ -6,6 +7,10 @@ import java.io.*;
 public class Principal {
 
     public static void main(String[] args) {
+
+        PersonaService personaService = new PersonaService();
+        personaService.menu();
+        /*
         try{
             FileReader file = new FileReader("src/main/resources/datos/empleados.json");
             BufferedReader reader = new BufferedReader(file);
@@ -23,6 +28,8 @@ public class Principal {
         }catch (IOException e){
             System.out.println("Error al leer el archivo");
         }
+
+         */
 
         /*
         File file = new File("src/main/resources/datos/empleados.json");
